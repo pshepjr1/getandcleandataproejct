@@ -11,7 +11,7 @@ subject_test <- read.table("subject_test.txt", quote="\"")
 subject_train <- read.table("subject_train.txt", quote="\"")
 
 ## set the column names to match the features
-colnames(X_train) <- features[,2]
+colnames(x_train) <- features[,2]
 colnames(x_test) <-  features[,2]
 colnames(y_test) <- "Activity_Label"
 colnames(y_train) <- "Activity_Label"
@@ -21,11 +21,11 @@ colnames(subject_train) <- "Subject"
 ## Item 1 from assignment - Merges the training and the test sets to create one data set.
 
   ## Merge the test data set (by column)
-  test_merged1 <- cbind(y_test, X_test)
+  test_merged1 <- cbind(y_test, x_test)
   test_merged2 <- cbind(subject_test, test_merged1)
 
   ## Merge the training data set (by column)
-  train_merged1 <- cbind(y_train, X_train)
+  train_merged1 <- cbind(y_train, x_train)
   train_merged2 <- cbind(subject_train, train_merged1)
 
   ## Combine the test and training data sets
